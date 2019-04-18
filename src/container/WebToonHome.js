@@ -1,5 +1,16 @@
 import React from 'react';
+import Header from '../component/Header';
+import Footer from '../component/Footer';
+import Gnb from '../component/Gnb';
 
-export default function WebtoonHome(props) {
-  return <div>WebtoonHome</div>;
-}
+const WebToonHome = props => {
+  return (
+    <div>
+      <Header />
+      <Gnb />
+      WebtoonHome
+      <Footer />
+    </div>
+  );
+};
+export default WebToonHome;

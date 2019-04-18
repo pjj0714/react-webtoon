@@ -1,5 +1,7 @@
 import React from 'react';
 
-export default function Viewer(props) {
+const Viewer = props => {
   return <div>Viewer</div>;
-}
+};
+
+export default Viewer;
