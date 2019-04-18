@@ -1,10 +1,7 @@
 import React from 'react';
-
-const Gnb = () => {
-  return (
-    <ul className="gnb">
-      <li>
-        <a href="#none" className="tab_day.on">
+{
+  /* <li>
+        <a href="#none" className="tab_day">
           월요일
         </a>
       </li>
@@ -17,7 +14,22 @@ const Gnb = () => {
         <a href="#none" className="tab_day">
           수요일
         </a>
-      </li>
+      </li> */
+}
+
+const Gnb = () => {
+  const days = ['월', '화', '수', '목', '금', '토', '일'];
+  return (
+    <ul className="gnb">
+      {days.map(day => {
+        return (
+          <li>
+            <a href="#none" className="tab_day">
+              {`${day}요일`}
+            </a>
+          </li>
+        );
+      })}
     </ul>
   );
 };
