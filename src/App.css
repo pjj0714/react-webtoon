@@ -169,9 +169,9 @@ var {
   background-color: #8e2f23;
 }
 
-.list_webtoon li {
+/* .list_webtoon li {
   border-top: 1px solid #ccc;
-}
+} */
 .list_webtoon .link_webtoon {
   display: block;
   overflow: hidden;

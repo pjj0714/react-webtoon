@@ -17,7 +17,6 @@ const Main = props => {
   };
 
   useEffect(() => {
-    console.log(1);
     getList();
   }, []);
 

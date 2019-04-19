@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 const WebtoonList = props => {
   return (
     <ul className="list_webtoon">
       {props.list.map((webtoon, index) => {
         return (
           <li key={index}>
-            <Link to="/" className="link_webtoon">
+            <Link to={`/webtoon/${webtoon.id}`} className="link_webtoon">
               <img
                 src={webtoon.thumbnail}
                 className="img_webtoon"
