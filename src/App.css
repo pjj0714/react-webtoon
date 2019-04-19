@@ -161,11 +161,16 @@ var {
 }
 .gnb .tab_day {
   display: block;
-  padding: 6px 0;
+  padding: 17px 0;
   text-align: center;
+  font-size: 15px;
   color: #fff;
 }
-.gnb .tab_day.on {
+.gnb .tab_day_on {
+  display: block;
+  padding: 17px 0;
+  text-align: center;
+  font-size: 15px;
   background-color: #8e2f23;
 }
 
