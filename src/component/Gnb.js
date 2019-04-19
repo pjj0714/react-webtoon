@@ -9,12 +9,11 @@ const Gnb = props => {
     <ul className="gnb">
       {days.map((day, i) => {
         return (
-          <li>
+          <li key={i} onClick={() => props.onClickEve(engDays[i])}>
             <Link
-              onClick={props.onClickEve()}
               to={`/?day=${engDays[i]}`}
               className={
-                props.day === engDays[i] ? 'tab_day.on' : 'tab_day'
+                props.day === engDays[i] ? 'tab_day_on' : 'tab_day'
               }>{`${day}요일`}</Link>
           </li>
         );

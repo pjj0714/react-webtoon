@@ -6,8 +6,9 @@ import WebtoonList from '../component/WebtoonList';
 import axios from 'axios';
 
 const Main = props => {
-  const currDay = props.location.search.substr(5);
-  const [day, setDay] = useState(currDay || 'mon');
+  const initDay =
+    props.location.search.length > 0 ? props.location.search.substr(5) : 'mon';
+  const [day, setDay] = useState(initDay);
   const [webtoonLists, setWebtoobLists] = useState([]);
 
   useEffect(() => {
@@ -25,8 +26,8 @@ const Main = props => {
       .catch(err => console.log(err));
   };
 
-  const onClickEve = () => {
-    setDay(currDay);
+  const onClickEve = day => {
+    setDay(day);
   };
 
   return (
