@@ -12,7 +12,7 @@ class App extends Component {
         <div>
           <Route exact path="/" component={Main} />
           <Route path="/webtoon/:webtoonId" component={WebToonHome} />
-          <Route path="/viewer/:viewerId" omponent={Viewer} />
+          <Route path="/viewer/:viewerId" component={Viewer} />
         </div>
       </Router>
     );
