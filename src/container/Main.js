@@ -27,7 +27,7 @@ const Main = props => {
   return (
     <div>
       <Header />
-      <Gnb />
+      <Gnb day={props.location.search.substr(5)} />
       {webtoonLists.length > 0 ? (
         <WebtoonList list={webtoonLists} />
       ) : (
