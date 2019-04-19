@@ -11,6 +11,7 @@ const Gnb = props => {
         return (
           <li>
             <Link
+              onClick={props.onClickEve()}
               to={`/?day=${engDays[i]}`}
               className={
                 props.day === engDays[i] ? 'tab_day.on' : 'tab_day'
@@ -23,21 +24,3 @@ const Gnb = props => {
 };
 
 export default Gnb;
-
-{
-  /* <li>
-        <a href="#none" className="tab_day">
-          월요일
-        </a>
-      </li>
-      <li>
-        <a href="#none" className="tab_day">
-          화요일
-        </a>
-      </li>
-      <li>
-        <a href="#none" className="tab_day">
-          수요일
-        </a>
-      </li> */
-}
