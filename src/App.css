@@ -177,7 +177,6 @@ var {
   overflow: hidden;
 }
 .list_webtoon .img_webtoon {
-  float: left;
   width: 148px;
   height: 106px;
   margin-right: 10px;
