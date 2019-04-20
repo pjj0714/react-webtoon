@@ -17,20 +17,21 @@ const Viewer = props => {
         const filterData = data.data.webtoonEpisodes.find(
           w => w.id === episodeId
         );
-        console.log('asasd: ', data.data.webtoonEpisodes);
         setEpisode(filterData);
       })
       .catch(err => console.log(err));
   };
   return (
-    <div>
+    <div className="wrap_viewer">
       {episode.id ? (
         <div>
-          <div>
+          <div className="top_viewer">
             {episode.title}
-            <Link to={`/webtoon/${episode.webtoonId}`}>X</Link>
+            <Link to={`/webtoon/${episode.webtoonId}`} className="btn_close">
+              X
+            </Link>
           </div>
-          <div>
+          <div className="wrap_images">
             {episode.images.map((img, index) => (
               <img key={index} src={img} />
             ))}

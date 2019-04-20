@@ -3,14 +3,18 @@ import { Link } from 'react-router-dom';
 
 const EpisodeList = props => {
   return (
-    <ul>
+    <ul className="list_webtoon list_episode">
       {props.episodeList.map((episode, index) => {
         return (
           <li key={index}>
-            <Link to={`/viewer/${episode.id}`}>
-              <img src={episode.thumbnailImage.url} alt={episode.title} />
-              <div>
-                <strong>{episode.title}</strong>
+            <Link to={`/viewer/${episode.id}`} className="link_webtoon">
+              <img
+                src={episode.thumbnailImage.url}
+                alt={episode.title}
+                className="img_webtoon"
+              />
+              <div className="info_webtoon">
+                <strong className="tit_webtoon">{episode.title}</strong>
                 {`${episode.dateCreated.substr(
                   0,
                   4
