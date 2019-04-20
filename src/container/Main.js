@@ -6,14 +6,14 @@ import WebtoonList from '../component/WebtoonList';
 import axios from 'axios';
 
 const Main = props => {
-  const initDay =
-    props.location.search.length > 0 ? props.location.search.substr(5) : 'mon';
-  const [day, setDay] = useState(initDay);
+  const curDay = new URLSearchParams(props.location.search).get('day');
+  const [day, setDay] = useState(curDay || 'mon');
   const [webtoonLists, setWebtoobLists] = useState([]);
 
   useEffect(() => {
     getList();
-  }, [day]);
+    if (curDay) setDay(curDay);
+  }, [curDay]);
 
   const _webtoonList = lists => {
     return lists.filter(webtoon => webtoon.day === day);
@@ -26,14 +26,10 @@ const Main = props => {
       .catch(err => console.log(err));
   };
 
-  const onClickEve = day => {
-    setDay(day);
-  };
-
   return (
     <div>
       <Header />
-      <Gnb day={day} onClickEve={onClickEve} />
+      <Gnb day={day} />
       {webtoonLists.length > 0 ? (
         <WebtoonList list={webtoonLists} />
       ) : (
