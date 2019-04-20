@@ -7,14 +7,11 @@ import EpisodeList from '../component/EpisodeList';
 import axios from 'axios';
 
 const WebToonHome = props => {
-  const [webtoonId, setWebtoonId] = useState(
-    parseInt(props.match.params.webtoonId, 10)
-  );
+  const webtoonId = parseInt(props.match.params.webtoonId, 10);
   const [webtoon, setWebtoon] = useState({});
   const [episodeList, setEpisodeList] = useState([]);
 
   useEffect(() => {
-    console.log(webtoon);
     _getWebtoon();
     _getEpisodeList();
   }, []);
